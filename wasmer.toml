@@ -1,0 +1,17 @@
+[package]
+name = "eduflex-app"
+version = "0.1.0"
+description = "EDUFLEX - Learn Without Limits Platform"
+license = "MIT"
+
+[dependencies]
+"wasmer/static-web-server" = "^1"
+
+[[command]]
+name = "script"
+module = "wasmer/static-web-server:web_server"
+runner = "wasi"
+
+[fs]
+"/public" = "."
+public = "."
